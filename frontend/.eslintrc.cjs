@@ -9,8 +9,16 @@ module.exports = {
         parser: '@typescript-eslint/parser',
     },
     extends: ['@nuxtjs/eslint-config-typescript', 'plugin:prettier/recommended'],
-    plugins: [],
+    plugins: ['prefer-arrow'],
     rules: {
+        'prefer-arrow/prefer-arrow-functions': [
+            'error',
+            {
+                disallowPrototype: true,
+                singleReturnOnly: false,
+                classPropertiesAllowed: false,
+            },
+        ],
         'no-console': ['warn', { allow: ['error'] }],
         'capitalized-comments': [
             'error',
