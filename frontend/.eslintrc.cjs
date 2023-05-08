@@ -19,7 +19,7 @@ module.exports = {
                 classPropertiesAllowed: false,
             },
         ],
-        'no-console': ['warn', { allow: ['error'] }],
+        'no-console': ['warn', { allow: [] }], // Updated to warn against console.error
         'capitalized-comments': [
             'error',
             'always',
